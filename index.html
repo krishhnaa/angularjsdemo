@@ -4,6 +4,16 @@
 <meta charset=utf-8 />
 <title>JS Bin</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  <style type="text/css">
+   .remove-icon{
+    background:url("./images/remove.gif");
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-top: -2px;
+   }
+  </style>
 </head>
 <body ng-app>
   <h1>Angular JS</h1>
@@ -19,7 +29,7 @@
   <p ng-hide="!!customers.length">No Customers yet</p>
   <ol ng-init="customers=[]">
     <li ng-repeat="customer in customers">{{customer.name}}
-(<a href="javascript:void(0);" ng-click="customers.splice($index,1)">X</a>)
+<a href="javascript:void(0);" ng-click="customers.splice($index,1)"><i class="remove-icon"></i></a>
     </li>
   </ol>
 </body>
